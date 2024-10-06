@@ -1,0 +1,25 @@
+<p>user works!</p>
+<input name="username" [(ngModel)]="user.username" ><br>
+<input name="password" [(ngModel)]="user.password">
+<input name="mobno" [(ngModel)]="user.mobno">
+<input name="emailid" [(ngModel)]="user.emailid">
+<input type="button" value="saveUser" (click)="saveUser()">{{message}}<br>
+<input type="button" value="deleteUser" (click)="deleteUser()">
+{{message}}
+
+<table>
+
+    <tr>
+        <th>username</th>
+        <th>password</th>
+        <th>mobno</th>
+        <th>emailid</th>
+    </tr>
+
+    <tr *ngFor="let user of users">
+        <td>{{user.username}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.mobno}}</td>
+        <td>{{user.emailid}}</td>
+    </tr>
+</table>
